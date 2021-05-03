@@ -1,0 +1,24 @@
+version: '3.2'
+services:
+  backend1:
+    build: ./backend
+    volumes:
+      - './backend'
+
+  backend2:
+    build: ./backend
+    volumes:
+      - './backend'
+
+  backend3:
+    build: ./backend
+    volumes:
+      - './backend'
+
+  loadbalancer:
+    build: ./load-balancer
+    ports:
+      - '8081:8081'
+
+volumes:
+  backend:
